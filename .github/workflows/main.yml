@@ -14,7 +14,7 @@ jobs:
         python-version: [3.8, 3.9, "3.10"]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
@@ -34,7 +34,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -58,7 +58,7 @@ jobs:
     needs: [test, lint]
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     
     - name: Set up Python
       uses: actions/setup-python@v4
